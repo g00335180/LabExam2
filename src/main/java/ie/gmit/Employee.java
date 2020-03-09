@@ -6,7 +6,7 @@ public class Employee
 {
     private String name;
     private int employeeNum;
-    private int phone;
+    private String phone;
     private int age;
 
     private int lengthName;
@@ -18,11 +18,11 @@ public class Employee
     {
 
     }
-    public Employee(String name, int employeeNum, int phone, int age )
+    public Employee(String name, int employeeNum, String phone, int age )
     {
         lengthName = name.length();
         lengthEmpNum = String.valueOf(employeeNum).length();
-        lengthPhNum = String.valueOf(phone).length();
+        lengthPhNum = phone.length();
         if((lengthName < 3) || (lengthName > 25)) {
             throw new IllegalArgumentException("Invalid Name Error");
         }
@@ -50,19 +50,15 @@ public class Employee
         }
 
     }
-    public String getName()
-    {
+    public String getName() {
         return name;
     }
-
-    public int getEmployeeNum()
-    {
+    public int getEmployeeNum() {
         return employeeNum;
     }
-    public int getPhone() {
+    public String getPhone() {
         return phone;
     }
-
     public int getAge() {
         return age;
     }
