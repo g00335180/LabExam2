@@ -29,13 +29,13 @@ public class Employee
         else{
             this.name = name;
         }
-        if((lengthEmpNum > 5) || (lengthEmpNum < 1)) {
+        if((lengthEmpNum != 5)) {
             throw new IllegalArgumentException("Invalid Employee Number Error");
         }
         else {
             this.employeeNum = employeeNum;
         }
-        if((lengthPhNum > 8) || (lengthPhNum < 1)) {
+        if((lengthPhNum != 8)) {
             throw new IllegalArgumentException("Invalid Phone Number Error");
         }
         else {
@@ -62,7 +62,4 @@ public class Employee
     public int getAge() {
         return age;
     }
-
-
-
 }
