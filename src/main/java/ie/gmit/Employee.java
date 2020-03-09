@@ -11,25 +11,42 @@ public class Employee
 
     private int lengthName;
     private int lengthEmpNum;
+    private int lengthPhNum;
+
 
     public Employee()
     {
 
     }
-    public Employee(String name, int employeeNum)
+    public Employee(String name, int employeeNum, int phone, int age )
     {
         lengthName = name.length();
         lengthEmpNum = String.valueOf(employeeNum).length();
+        lengthPhNum = String.valueOf(phone).length();
         if((lengthName < 3) || (lengthName > 25)) {
             throw new IllegalArgumentException("Invalid Name Error");
         }
         else{
             this.name = name;
+        }
+        if((lengthEmpNum > 5) || (lengthEmpNum < 1)) {
+            throw new IllegalArgumentException("Invalid Employee Number Error");
+        }
+        else {
             this.employeeNum = employeeNum;
         }
-        if((lengthEmpNum > 8) || (lengthEmpNum < 1))
+        if((lengthPhNum > 8) || (lengthPhNum < 1)) {
+            throw new IllegalArgumentException("Invalid Phone Number Error");
+        }
+        else {
+            this.phone = phone;
+        }
+        if(age < 16)
         {
-
+            throw new IllegalArgumentException("Must be over 16");
+        }
+        else{
+            this.age = age;
         }
 
     }
