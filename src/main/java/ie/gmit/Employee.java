@@ -1,3 +1,11 @@
+/*
+    Name: Meghan Fitzgerald
+    Date: 9/3/2020
+    Contact: g00335180@gmit.ie
+    Description: Lab Exam 2 on maven, junit and jacoco
+
+ */
+
 package ie.gmit;
 
 import java.lang.IllegalArgumentException;
